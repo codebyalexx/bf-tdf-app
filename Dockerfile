@@ -6,6 +6,7 @@ WORKDIR /app
 ENV NODE_ENV=production \
     HOST=0.0.0.0 \
     PORT=3000 \
+    MAX_SESSIONS=25 \
     PUPPETEER_SKIP_DOWNLOAD=true
 
 COPY package.json package-lock.json ./
