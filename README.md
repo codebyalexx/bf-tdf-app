@@ -90,4 +90,6 @@ compteurs sont stockes dans les volumes nommes `basicfit_profile` et
 `basicfit_sessions`, et survivent donc aux recreations du conteneur.
 
 Adaptez `MAX_SESSIONS` dans `.env` a la RAM disponible. Comptez environ 150 a
-200 Mo par session Chromium, en gardant une marge pour Node et le systeme.
+200 Mo par session Chromium, en gardant une marge pour Node et le systeme. La
+limite absolue est de 25 sessions et la configuration Docker propose 25 par
+defaut.

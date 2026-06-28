@@ -11,7 +11,7 @@ services:
       NODE_ENV: production
       HOST: 0.0.0.0
       PORT: 3000
-      MAX_SESSIONS: "${MAX_SESSIONS:-6}"
+      MAX_SESSIONS: "${MAX_SESSIONS:-25}"
       DEFAULT_SESSION_COUNT: "${DEFAULT_SESSION_COUNT:-1}"
       DEFAULT_COOLDOWN_SECONDS: "${DEFAULT_COOLDOWN_SECONDS:-0}"
       SESSIONS_DIRECTORY: /app/.browser-sessions

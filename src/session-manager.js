@@ -4,7 +4,7 @@ import { ActivityWorker } from './activity-worker.js';
 import { createBasicFitSession } from './basicfit.js';
 
 export const MAX_SESSIONS = Math.min(
-  20,
+  25,
   Math.max(1, Math.trunc(Number(process.env.MAX_SESSIONS) || 3)),
 );
 const OVERVIEW_URL =
