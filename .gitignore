@@ -1,0 +1,9 @@
+node_modules/
+.browser-profile/
+.browser-sessions/
+.node/
+debug/
+.env
+*.log
+npm-debug.log*
+.DS_Store

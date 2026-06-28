@@ -1,0 +1,21 @@
+[Unit]
+Description=Basic-Fit Puppeteer Capture UI
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/root/bf
+Environment=NODE_ENV=production
+Environment=PORT=80
+Environment=HOST=0.0.0.0
+Environment=SELF_TEST=0
+ExecStart=/root/bf/.node/bin/node /root/bf/src/server.js
+Restart=always
+RestartSec=5
+TimeoutStopSec=30
+KillSignal=SIGTERM
+
+[Install]
+WantedBy=multi-user.target

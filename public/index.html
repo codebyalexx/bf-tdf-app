@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ff6b00" />
+    <title>Basic-Fit Session Lab</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">BF</div>
+      <div class="topbar-copy">
+        <h1>Basic-Fit Session Lab</h1>
+        <p>Lamballe-Armor Avenue Georges Clémenceau</p>
+      </div>
+      <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+    </header>
+
+    <main>
+      <section class="summary-band" aria-labelledby="summary-title">
+        <div class="summary-heading">
+          <div>
+            <p class="eyebrow">Vue consolidée</p>
+            <h2 id="summary-title">Toutes les sessions</h2>
+          </div>
+          <div class="ranking" id="ranking">
+            <span>Classement</span>
+            <strong id="club-rank">--</strong>
+          </div>
+        </div>
+        <dl class="summary-metrics">
+          <div><dt>Sessions</dt><dd id="active-sessions">0</dd></div>
+          <div><dt>Cycles</dt><dd id="total-cycles">0</dd></div>
+          <div><dt>Points sessions</dt><dd id="total-points">0p</dd></div>
+          <div><dt>Points club</dt><dd id="club-points">--</dd></div>
+        </dl>
+      </section>
+
+      <section class="config-band" aria-labelledby="config-title">
+        <div>
+          <h2 id="config-title">Configuration globale</h2>
+          <p id="config-status" role="status" aria-live="polite">Chargement…</p>
+        </div>
+        <form id="config-form">
+          <label>
+            Sessions simultanées
+            <select id="session-count" name="sessionCount"></select>
+          </label>
+          <label>
+            Cooldown additionnel
+            <span class="number-control">
+              <input
+                id="cooldown-seconds"
+                name="cooldownSeconds"
+                type="number"
+                min="0"
+                max="86400"
+                step="1"
+                inputmode="numeric"
+              />
+              <span>secondes</span>
+            </span>
+          </label>
+          <button type="submit" id="apply-config">Appliquer</button>
+        </form>
+      </section>
+
+      <section class="sessions-section" aria-labelledby="sessions-title">
+        <div class="section-heading">
+          <div>
+            <h2 id="sessions-title">Sessions Puppeteer</h2>
+            <p id="sessions-status">Initialisation des profils</p>
+          </div>
+          <span class="live-label">Temps réel</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Session</th>
+                <th>État</th>
+                <th>Activité</th>
+                <th>Chrono</th>
+                <th>Cycles</th>
+                <th>Points</th>
+                <th><span class="sr-only">Ouvrir</span></th>
+              </tr>
+            </thead>
+            <tbody id="sessions-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

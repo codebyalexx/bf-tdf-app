@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ff6b00" />
+    <title>Détail session Basic-Fit</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/session.js"></script>
+  </head>
+  <body>
+    <header class="topbar detail-topbar">
+      <a class="back-link" href="/" aria-label="Retour au dashboard">←</a>
+      <div class="topbar-copy">
+        <h1 id="session-title">Session</h1>
+        <p id="session-club">Lamballe-Armor</p>
+      </div>
+      <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+    </header>
+
+    <main>
+      <section class="worker-band" aria-labelledby="activity-title">
+        <div class="worker-heading">
+          <div>
+            <p class="eyebrow">Activité courante</p>
+            <h2 id="activity-title">Initialisation</h2>
+          </div>
+          <span class="phase-badge" id="worker-phase">En attente</span>
+        </div>
+        <p class="worker-message" id="worker-message">Connexion à Chromium</p>
+        <dl class="summary-metrics compact-metrics">
+          <div><dt>Valeur</dt><dd id="worker-points">0p</dd></div>
+          <div><dt>Chrono</dt><dd id="worker-timer">--:--</dd></div>
+          <div><dt>Cycles</dt><dd id="worker-cycles">0</dd></div>
+          <div><dt>Total</dt><dd id="worker-total">0p</dd></div>
+        </dl>
+      </section>
+
+      <section class="capture-section" aria-labelledby="capture-title">
+        <div class="section-heading capture-heading">
+          <div>
+            <h2 id="capture-title">Écran Puppeteer</h2>
+            <p id="capture-status" role="status" aria-live="polite">Aucune capture</p>
+          </div>
+          <button id="capture-button" type="button">
+            <span class="camera-icon" aria-hidden="true"></span>
+            Capturer
+          </button>
+        </div>
+        <div class="preview">
+          <div class="empty-state" id="empty-state">
+            <div class="empty-camera" aria-hidden="true"></div>
+            <p>La capture de cette session apparaîtra ici.</p>
+          </div>
+          <img id="screenshot" alt="Capture de la session Puppeteer" />
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
